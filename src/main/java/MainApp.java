@@ -1,6 +1,10 @@
 import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+
+import java.io.IOException;
 
 public class MainApp extends Application {
 
@@ -9,14 +13,12 @@ public class MainApp extends Application {
     }
 
     @Override
-    public void start(Stage primaryStage) {
-        setScene(primaryStage);
-    }
-
-    private void setScene(Stage primaryStage) {
+    public void start(Stage primaryStage) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("TheWayPane.fxml"));
         primaryStage.setTitle("The Way");
-        Scene value = new Scene(new TheWayPaneController());
-        primaryStage.setScene(value);
+        Scene scene = new Scene (root);
+        scene.setRoot(root);
+        primaryStage.setScene(scene);
         primaryStage.show();
     }
 }

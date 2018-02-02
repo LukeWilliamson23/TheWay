@@ -7,7 +7,7 @@ import java.io.IOException;
 
 public class TheWayPaneController extends BorderPane{
     public TheWayPaneController() {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("TheWayPane.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/TheWayPane.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
         try {
