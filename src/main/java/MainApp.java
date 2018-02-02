@@ -14,8 +14,8 @@ public class MainApp extends Application {
 
     @Override
     public void start(Stage primaryStage) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("TheWayPane.fxml"));
         primaryStage.setTitle("The Way");
+        TheWayPane root = new TheWayPane();
         Scene scene = new Scene (root);
         scene.setRoot(root);
         primaryStage.setScene(scene);

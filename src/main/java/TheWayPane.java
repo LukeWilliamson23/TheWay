@@ -5,9 +5,9 @@ import javafx.scene.layout.BorderPane;
 
 import java.io.IOException;
 
-public class TheWayPaneController extends BorderPane{
-    public TheWayPaneController() {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/TheWayPane.fxml"));
+public class TheWayPane extends BorderPane{
+    public TheWayPane() {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("TheWayPane.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
         try {
@@ -22,6 +22,7 @@ public class TheWayPaneController extends BorderPane{
     }
 
     public void closeOnAction(ActionEvent actionEvent) {
+        System.out.println("button click!");
     }
 }
 
